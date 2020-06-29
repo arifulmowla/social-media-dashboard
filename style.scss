@@ -142,7 +142,7 @@ body {
       background-color: var(--cardBg);
       padding: 20px;
       border-radius: 6px;
-      border-top: 3px solid $Facebook;
+      border-top: 4px solid $Facebook;
       //margin: 0 20px;
 
       .icon-name {
@@ -182,15 +182,27 @@ body {
       }
 
       &:nth-child(2) {
-        border-top: 3px solid $Twitter;
+        border-top: 4px solid $Twitter;
       }
 
       &:nth-child(3) {
-        border-top: 3px solid rgb(218, 34, 34);
+        //border-top: 3px solid rgb(218, 34, 34);
+        border-top: 4px;
+
+        ::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: linear-gradient(to right, #fdc468, #df4996);
+          border-radius: 6px 6px 0 0;
+        }
       }
 
       &:nth-child(4) {
-        border-top: 3px solid $YouTube;
+        border-top: 4px solid $YouTube;
       }
     }
 
