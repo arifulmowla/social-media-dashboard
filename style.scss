@@ -129,7 +129,7 @@ body {
 
   .card-flex {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     //justify-content: space-between;
     margin: 0 auto;
@@ -210,7 +210,7 @@ body {
 
   .card-flex {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     box-sizing: border-box;
 
@@ -271,7 +271,7 @@ label {
   text-indent: -9999px;
   width: 50px;
   height: 30px;
-  background: $Toggle;
+  background: $Toggle-dark;
   display: block;
   border-radius: 100px;
   position: relative;
@@ -290,7 +290,7 @@ label:after {
 }
 
 input:checked + label {
-  background: $Toggle-dark;
+  background: $Toggle;
 }
 
 input:checked + label:after {
@@ -306,20 +306,29 @@ label:active:after {
 
 @media only screen and (max-width: 1401px) {
   .bottom-box .card-flex {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media only screen and (width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .bottom-box .card-flex {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+    grid-template-columns: repeat(2, 1fr);
   }
   .head-cards .card-flex {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 1024px) {
   .wrapper {
     padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .bottom-box .card-flex {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .head-cards .card-flex {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

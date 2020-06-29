@@ -82,8 +82,8 @@ body {
 .head-cards .card-flex {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   margin: 0 auto;
   text-align: center;
@@ -163,8 +163,8 @@ body {
 .bottom-box .card-flex {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(280px, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -229,7 +229,8 @@ label {
   text-indent: -9999px;
   width: 50px;
   height: 30px;
-  background: #aeb3cb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#378fe6), to(#3eda82));
+  background: linear-gradient(#378fe6, #3eda82);
   display: block;
   border-radius: 100px;
   position: relative;
@@ -249,8 +250,7 @@ label:after {
 }
 
 input:checked + label {
-  background: -webkit-gradient(linear, left top, left bottom, from(#378fe6), to(#3eda82));
-  background: linear-gradient(#378fe6, #3eda82);
+  background: #aeb3cb;
 }
 
 input:checked + label:after {
@@ -265,25 +265,36 @@ label:active:after {
 
 @media only screen and (max-width: 1401px) {
   .bottom-box .card-flex {
-    -ms-grid-columns: (minmax(220px, 2fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media only screen and (width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .bottom-box .card-flex {
-    -ms-grid-columns: (minmax(150px, 2fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .head-cards .card-flex {
-    -ms-grid-columns: (minmax(180px, 2fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .wrapper {
     padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .bottom-box .card-flex {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .head-cards .card-flex {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 
