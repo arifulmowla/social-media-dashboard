@@ -1,0 +1,295 @@
+html {
+  --bg: hsl(0, 0%, 100%);
+  --topBg: hsl(225, 100%, 98%);
+  --cardBg: hsl(227, 47%, 96%);
+  --textNormal: hsl(228, 12%, 44%);
+  --textStrong: hsl(230, 17%, 14%);
+  --boxHover: hsl(227, 24%, 93%);
+}
+
+html[data-theme="light"] {
+  --bg: hsl(230, 17%, 14%);
+  --topBg: hsl(232, 19%, 15%);
+  --cardBg: hsl(228, 28%, 20%);
+  --textNormal: hsl(228, 34%, 66%);
+  --textStrong: hsl(0, 0%, 100%);
+  --boxHover: hsl(229, 27%, 28%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 100px;
+}
+
+.top-box .head-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-box .head-flex .head-left h1 {
+  color: var(--textStrong);
+  padding: 5px 0;
+}
+
+.top-box .head-flex .head-left p {
+  color: var(--textNormal);
+  font-weight: bold;
+}
+
+.top-box .head-flex .head-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-box .head-flex .head-right p {
+  padding: 0 15px;
+  color: var(--textNormal);
+  font-weight: bold;
+  padding: 25px 20px;
+}
+
+.head-cards {
+  padding: 40px 0;
+}
+
+.head-cards .card-flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  grid-gap: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.head-cards .card-flex .head-card {
+  position: relative;
+  background-color: var(--cardBg);
+  padding: 20px;
+  border-radius: 6px;
+  border-top: 3px solid #198ff5;
+}
+
+.head-cards .card-flex .head-card .icon-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0 20px 0;
+}
+
+.head-cards .card-flex .head-card .icon-name img {
+  display: block;
+}
+
+.head-cards .card-flex .head-card .icon-name p {
+  color: var(--textNormal);
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+.head-cards .card-flex .head-card span.count {
+  color: var(--textStrong);
+  font-size: 44px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.head-cards .card-flex .head-card p.follower {
+  color: var(--textNormal);
+  letter-spacing: 5px;
+  font-weight: normal;
+  padding: 5px 0;
+}
+
+.head-cards .card-flex .head-card .todays-status {
+  color: #1db489;
+  padding-top: 20px;
+}
+
+.head-cards .card-flex .head-card:nth-child(2) {
+  border-top: 3px solid #1ca0f2;
+}
+
+.head-cards .card-flex .head-card:nth-child(3) {
+  border-top: 3px solid #da2222;
+}
+
+.head-cards .card-flex .head-card:nth-child(4) {
+  border-top: 3px solid #c4032a;
+}
+
+.head-cards .card-flex .head-card:hover {
+  background-color: var(--boxHover);
+}
+
+.bottom-box h2 {
+  color: var(--textStrong);
+  padding: 20px 0;
+  position: relative;
+}
+
+.bottom-box .card-flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(280px, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+  grid-gap: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bottom-box .card-flex .bottom-card {
+  background-color: var(--cardBg);
+  padding: 30px 20px;
+  border-radius: 8px;
+}
+
+.bottom-box .card-flex .bottom-card .card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bottom-box .card-flex .bottom-card .card-top p {
+  color: var(--textNormal);
+  font-weight: bold;
+}
+
+.bottom-box .card-flex .bottom-card .card-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 15px;
+}
+
+.bottom-box .card-flex .bottom-card .card-bottom span {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--textStrong);
+}
+
+.bottom-box .card-flex .bottom-card .card-bottom p {
+  color: #1db489;
+}
+
+.bottom-box .card-flex .bottom-card:hover {
+  background-color: var(--boxHover);
+}
+
+.down p {
+  color: red !important;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 30px;
+  background: #aeb3cb;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: var(--bg);
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: -webkit-gradient(linear, left top, left bottom, from(#378fe6), to(#3eda82));
+  background: linear-gradient(#378fe6, #3eda82);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 25px;
+}
+
+@media only screen and (max-width: 1401px) {
+  .bottom-box .card-flex {
+    -ms-grid-columns: (minmax(220px, 2fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+  }
+}
+
+@media only screen and (width: 1024px) {
+  .bottom-box .card-flex {
+    -ms-grid-columns: (minmax(150px, 2fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  }
+  .head-cards .card-flex {
+    -ms-grid-columns: (minmax(180px, 2fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .top-box .head-flex .head-left h1 {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
